@@ -38,14 +38,11 @@ public class ConexaoMySQL {
             } else {
                 status = ("STATUS--->Não foi possivel realizar conexão");
             }
-
         } catch (ClassNotFoundException e) {
-            System.out.println("O driver expecificado nao foi encontrado.");
-
+            throw new Exception("O driver especificado nao foi encontrado.");
         } catch (SQLException e) {
             e.printStackTrace();
-
-            System.out.println("Nao foi possivel conectar ao Banco de Dados.");
+            throw new Exception("Nao foi possivel conectar ao Banco de Dados.");
 
         }
     }
