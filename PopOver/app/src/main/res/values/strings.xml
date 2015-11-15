@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PopOver</string>
+
+    <!-- Tela de login -->
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="notMember">Ainda não possui uma conta?\nCadastre-se aqui</string>
+
+    <!-- Tela de sign up -->
+    <string name="name">Nome</string>
+    <string name="createAccount">Criar Conta</string>
+    <string name="alreadyMember">Já é usuário? Faça o login</string>
+
+    <!-- Tela de Novo evento -->
+    <string name="new_place_activity_lat">LAT:</string>
+    <string name="new_place_activity_lng">LONG:</string>
+    <string name="new_place_activity_address">Endereço:</string>
+    <string name="new_place_activity_name">Nome:</string>
+    <string name="new_place_activity_description">Descrição:</string>
+    <string name="new_place_activity_img_url">URL Imagem:</string>
+    <string name="new_place_activity_confirm">Confirmar</string>
+
+</resources>
