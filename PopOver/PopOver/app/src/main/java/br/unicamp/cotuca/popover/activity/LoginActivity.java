@@ -89,10 +89,10 @@ public class LoginActivity extends AppCompatActivity {
             //check if email and password match
             if (usuarios.confirmarLogin(email, password)) {
                 /* Create an Intent that will start the Login Activity. */
-                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                /*Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                 intent.putExtra(MainActivity.EXTRA_TIPO, "usuario");
                 LoginActivity.this.startActivity(intent);
-                LoginActivity.this.finish();
+                LoginActivity.this.finish();*/
             }
         } else {
             // check if exists on pEntidade table

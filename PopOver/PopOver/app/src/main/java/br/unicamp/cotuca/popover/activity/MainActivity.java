@@ -36,12 +36,10 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.util.Locale;
 
-/**
- * Created by joao on 31/08/15.
- */
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener, MainView {
     private static final String TAG = MainActivity.class.getSimpleName();
-    public static final String EXTRA_TIPO = "main_extra_tipo";
+
+    //public static final String EXTRA_TIPO = "main_extra_tipo";
 
     private MainPresenter mPresenter;
 
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private Marker lastOpened;
 
-    private String tipo;
+    //private String tipo;
 
     @Override
     public boolean onMarkerClick(Marker marker) {
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getIntentExtra();
+        //getIntentExtra();
 
         setContentView(R.layout.main_activity);
 
@@ -107,9 +105,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    private void getIntentExtra(){
+    /*private void getIntentExtra(){
         tipo = getIntent().getExtras().getString(EXTRA_TIPO);
-    }
+    }*/
 
     private void configPlaces(){
         places = new Place[14];
@@ -162,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         final Intent mIntent = new Intent(this, NewPlaceActivity.class);
 
         FloatingActionButton button = (FloatingActionButton)findViewById(R.id.main_activity_add);
-        button.setDrawable(getResources().getDrawable(R.drawable.plus));
+        button.setDrawable(getResources().getDrawable(R.drawable.ic_action_new));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,10 +168,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        /*
         // se for usuário, não pode visualizar esse botão
         if (tipo == "usuario") {
             button.hide(true);
         }
+        */
     }
 
     @Override
